@@ -4,7 +4,7 @@
 #include <algorithm>
 template <typename T>
 class BST {
-private:
+ private:
     struct NODE {
         T word;
         int count;
@@ -19,10 +19,9 @@ private:
             root->count = 1;
         } else if (root->word > word) {
             root->left = addNODE(root->left, word);
-        } else if (root->value < value) {
+        } else if (root->word < word) {
             root->right = addNODE(root->right, word);
-        }
-        else {
+        } else {
             root->count++;
         }
         return root;
@@ -39,7 +38,7 @@ private:
         return searchTree(root->right, word);
     }
 
-public:
+ public:
     BST() : root(nullptr) {}
     void add(const T& word) { root = addNODE(root, word); }
     int depth() { return heightTree(root); }

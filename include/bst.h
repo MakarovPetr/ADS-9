@@ -44,10 +44,9 @@ class BST {
     int depth() { return heightTree(root); }
     int search(const T& word) {
         NODE* cur = searchTree(root, word);
-        if (current == nullptr) {
+        if (cur == nullptr) {
             return 0;
-        }
-        else {
+        } else {
             return cur->count;
         }
     }

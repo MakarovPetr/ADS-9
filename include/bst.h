@@ -41,7 +41,7 @@ class BST {
  public:
     BST() : root(nullptr) {}
     void add(const T& word) { root = addNODE(root, word); }
-    int depth() { return heightTree(root); }
+    int depth() { return heightTree(root) - 1; }
     int search(const T& word) {
         NODE* cur = searchTree(root, word);
         if (cur == nullptr) {

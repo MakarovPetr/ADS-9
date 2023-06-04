@@ -6,7 +6,7 @@
 #include  "bst.h"
 
 BST<std::string> makeTree(const char* filename) {
- BST<std::string> BSTtree;
+  BST<std::string> BSTtree;
   std::ifstream file(filename);
   std::string result;
   while (!file.eof()) {
@@ -20,5 +20,5 @@ BST<std::string> makeTree(const char* filename) {
       result.clear();
     }
   }
-  return BSTtree;  
+ return BSTtree;  
 }
